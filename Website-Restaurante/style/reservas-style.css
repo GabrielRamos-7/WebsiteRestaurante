@@ -1,0 +1,135 @@
+body {
+    background-color: #1c3520;
+    padding: 0;
+    margin: 0;
+}
+.box {
+    margin: 300px 0;
+    background-color:  #FFFFF0;
+    height: 400px;
+    width: 750px;
+    text-align: center;
+    position: absolute;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    border-radius:10px;
+}
+hr {
+    color: #203c24;
+    background-color: #203c24;
+    height: 1px;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #203c24;
+}
+.top-text {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 400;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.reserva-section input {
+    outline: none;
+    border:none;
+    color: #203c24;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    height: 25px;
+    width: 150px;
+    background-color: #FFFFF0;
+    position: relative;
+    bottom: 8px;
+    pointer-events: none;
+}
+label {
+    pointer-events: none;
+}
+button {
+    margin: 0 15px;
+    height: 20px;
+    fill: #203c24;
+    background-color: #FFFFF0;
+    padding: 0; 
+    border: none; 
+    background: none;
+    cursor: pointer;
+}
+.input_button {
+    margin: 20px;
+}
+#procurar { 
+    margin: 0 auto;
+    width: 700px;
+    height: 50px;
+    background-color: #1c3520;
+    border-radius:4px;
+}
+#procurar p, #finalizar p {
+    color: #FFFFF0;
+    font-size: 16px;
+}
+#pagamento-box input{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: #203c24;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    background-color: #FFFFF0;
+   
+}
+#voltar-button {
+    display: block;
+    width: 20px;
+    margin-top: 5px;
+}
+#nomes {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#contato_div {   
+    margin: 0 auto;   
+}
+#contato_div label{
+    margin: 0 auto;
+}
+#data-cartao-div {
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+}
+#dados-cartao{
+    float: left;
+}
+#data-cartao {
+    width: 90px;
+}
+#codigo-cartao-div {
+    position: relative;
+    left: 500px;
+    bottom: 100px;
+}
+#codigo-cartao {
+    width: 50px;
+}
+
+#finalizar { 
+    position: relative;
+    bottom: 50px;
+    margin: 0 auto;
+    width: 700px;
+    height: 50px;
+    background-color: #1c3520;
+    border-radius:4px;
+}
+

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/menu-celular-style.css">
+</head>
+<body>
+    <nav id="ver-pedidos">
+        <h2>Ver Pedidos <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg></h2>
+    </nav>
+    <div id="pedidos-box">
+        <p id="pedidos"></p>
+        <p id="total"></p>
+        <button id="pagar"><p>Pagar agora</p></button>
+    </div>
+    <div id="confirmar-box">
+        <p id="confirmar-texto">Confirme seu pedido:</p>
+        <p id="nome-pedido"></p>
+        <button id="confirmar-btn">Confirmar</button>
+        <button id="cancelar-btn" onclick=" fecharConfirmarBox()">Cancelar</button>
+        <p id="confirmacao-msg"></p>
+    </div>
+    <div class="categoriaEitens">
+        <div class="categoria" id="categoria1">
+            <img src="midia/tomato-basil-pasta-sauce-recipe.webp" alt="" width="100%" height="300px">
+            <hr>
+            <div class="categoria-texto">
+                <h2>Pratos</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg>
+            </div>  
+        </div>
+        <div class="itens-container" id="itens-container1">
+            <table class="item">
+                <tr>
+                    <td>Polenta</td>
+                    <td>R$ 40,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Polenta', 40)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Lasanha a Bolonhesa</td>
+                    <td>R$ 48,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Lasanha a Bolonhesa', 48)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Macarrão c/ molho de tomate</td>
+                    <td>R$ 35,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Macarrão c/ molho de tomate', 35)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Macarrão à Carbonara</td>
+                    <td>R$ 45,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Macarrão à Carbonara', 45)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Macarrão c/ molho pesto</td>
+                    <td>R$ 45,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Macarrão c/ molho pesto', 45)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Macarrão à bolonhesa</td>
+                    <td>R$ 40,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Macarrão à bolonhesa', 40)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Risotto de Aspargo</td>
+                    <td>R$ 50,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Risotto de Aspargo', 50)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Risoto de Açafrão</td>
+                    <td>R$ 55,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Risoto de Açafrão', 55)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+                <tr>
+                    <td>Risotto de frutos do mar</td>
+                    <td>R$ 65,00</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Risotto de frutos do mar', 65)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+    <div class="categoriaEitens">
+        <div class="categoria" id="categoria2">
+            <img src="midia/red-wine-types.jpg" alt="" width="100%" height="300px">
+            <hr>
+            <div class="categoria-texto">
+                <h2>Vinhos</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg>
+            </div>  
+        </div>
+        <div class="itens-container" id="itens-container2">
+            <table class="item">
+                <tr>
+                    <td>Torbae Valpolicella Ripasso Classico Superiore (Tinto)</td>
+                    <td>R$200</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Torbae Valpolicella Ripasso Classico Superiore', 200)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
+                    </button></td>
+                </tr>
+                
+                <tr>
+                    <td>Chianti Classico, Rodano Tuscania (Tinto)</td>
+                    <td>R$87</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Chianti Classico, Rodano Tuscania', 87)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
+                    </button></td>
+                </tr>
+                
+                <tr>
+                    <td>Noble Vines Cabernet Sauvignon Americano (Tinto)</td>
+                    <td>R$30</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Noble Vines Cabernet Sauvignon Americano', 30)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
+                    </button></td>
+                </tr>
+                
+                <tr>
+                    <td>Lenotti Pinot Grigio delle Venezie (Branco)</td>
+                    <td>R$28</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Lenotti Pinot Grigio delle Venezie', 28)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
+                    </button></td>
+                </tr>
+                
+                <tr>
+                    <td>Verdicchio Casal Di Serra (Branco)</td>
+                    <td>R$32</td>
+                    <td><button class="comprar" onclick="abrirConfirmarBox('Verdicchio Casal Di Serra', 32)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
+                    </button></td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+    <div class="categoriaEitens">
+        <div class="categoria" id="categoria3">
+            <img src="midia/Basic-Gelato-Recipe_020.webp" alt="" width="100%" height="300px">
+            <hr>
+            <div class="categoria-texto">
+                <h2>Sobremesas</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg>
+            </div>  
+        </div>
+        <div class="itens-container" id="itens-container3">
+            <table class="item">
+                <table class="item">
+                    <tr>
+                        <td>Tiramisu</td>
+                        <td>R$28</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Tiramisu', 28)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Affogato</td>
+                        <td>R$22</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Affogato', 22)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Gelato</td>
+                        <td>R$12</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Gelato', 12)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Torta Caprese</td>
+                        <td>R$30</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Torta Caprese', 30)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Cannoli</td>
+                        <td>R$18</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Cannoli', 18)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg></button></td>
+                    </tr>
+                </table>
+                
+            </table>
+        </div>
+    </div>
+    <div class="categoriaEitens">
+        <div class="categoria" id="categoria4">
+            <img src="midia/mezcal-negroni-1500x1500-primary-6f6c472050a949c8a55aa07e1b5a2d1b.jpg" alt="" width="100%" height="300px">
+            <hr>
+            <div class="categoria-texto">
+                <h2>Drinks</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M13 17.586V4h-2v13.586l-6.293-6.293-1.414 1.414L12 21.414l8.707-8.707-1.414-1.414L13 17.586z"/></svg>
+            </div>  
+        </div>
+        <div class="itens-container" id="itens-container4">
+            <table class="item">
+                <table class="item">
+                    <tr>
+                        <td>Aperol Spritz</td>
+                        <td>R$38</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Aperol Spritz', 38)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Negroni</td>
+                        <td>R$40</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Negroni', 40)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>New York Sour</td>
+                        <td>R$42</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('New York Sour', 42)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Cosmopolitan</td>
+                        <td>R$35</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Cosmopolitan', 35)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                
+                <table class="item">
+                    <tr>
+                        <td>Hugo</td>
+                        <td>R$36</td>
+                        <td><button class="comprar" onclick="abrirConfirmarBox('Hugo', 36)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M8,3V7H21l-2,7H8v2H18a1,1,0,0,1,0,2H7a1,1,0,0,1-1-1V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                
+            </table>
+        </div>
+    </div>
+    <script src="script/menu-celular-script.js"></script>
+</body>
+</html>

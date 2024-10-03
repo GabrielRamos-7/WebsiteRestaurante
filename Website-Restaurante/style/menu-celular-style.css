@@ -33,7 +33,7 @@ nav svg {
 #pedidos-box {
     display: block;
     position: fixed;
-    top: 120px;
+    top: 140px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fffff0;
